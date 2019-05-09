@@ -1,0 +1,15 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "target": "es2017",
+    "skipLibCheck": true,
+    "module": "commonjs",
+    "allowJs": true,
+    "outDir": "dist/"
+  }
+}
