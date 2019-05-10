@@ -27,7 +27,10 @@ export function normalizePriceToTime(value: IPriceToTime) {
   const result = new BigNumber(value.priceValue)
     .multipliedBy(priceUnits[value.priceUnit])
     .multipliedBy(timeUnits.hour)
-    .dividedBy(timeUnits[value.timeUnit]);
+    .dividedBy(timeUnits[value.timeUnit])
+    // We round to half down because WEI must be an integer (returning an error may also be an option)
+    .dp(0, BigNumber.ROUND_HALF_DOWN)
+    .toFixed();
 
   return { result };
 }
