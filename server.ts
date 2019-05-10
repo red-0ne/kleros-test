@@ -3,7 +3,7 @@ import { rateConversion } from "./routes/rate-conversion";
 
 const server = new Server({
     port: 8080,
-    host: "localhost",
+    host: "0.0.0.0",
 });
 
 server.route(rateConversion);

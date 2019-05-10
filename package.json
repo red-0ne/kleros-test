@@ -5,6 +5,11 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
+    "docker:build": "docker build -t kleros-test .",
+    "docker:start": "docker run -it --rm -p 8080:8080 --name kleros-test-server kleros-test start",
+    "docker:test": "docker run -it --rm --name kleros-test-server kleros-test test",
+    "build": "tsc -p .",
+    "start": "node dist/index.js",
     "lint": "tslint --project .",
     "test": "lab -v test/*.spec.js"
   },
