@@ -1,6 +1,6 @@
 import { ServerRoute } from "hapi";
 import * as BaseJoi from "joi";
-import { normalizePriceToTime, priceUnits, timeUnits, IPriceToTime } from "../lib/normalize-price-to-time";
+import { IPriceToTime, normalizePriceToTime, priceUnits, timeUnits } from "../lib/normalize-price-to-time";
 
 // Price per unit titme validaor
 const priceToTime: BaseJoi.Extension = (joi: typeof BaseJoi) => ({
