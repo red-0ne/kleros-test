@@ -11,5 +11,9 @@
     "module": "commonjs",
     "allowJs": true,
     "outDir": "dist/"
-  }
+  },
+  "exclude": [
+    "node_modules",
+    "**/*.js"
+  ]
 }
